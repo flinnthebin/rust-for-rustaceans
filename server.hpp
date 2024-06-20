@@ -7,7 +7,7 @@ using boost::asio::ip::tcp;
 
 class Server {
  public:
-	Server(short port);
+	Server(short const port = 8080);
 
 	auto run_context() -> void;
 	auto accept_connection() -> void;
