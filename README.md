@@ -1,3 +1,4 @@
-# CachePP
+# Rust For Rustaceans
 
-Rolling your own database is highly advisable, or so I have been told.
+Notes
+
