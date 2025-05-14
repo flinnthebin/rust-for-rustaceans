@@ -89,3 +89,28 @@ fn lifetime_holes() {
     }
     println!("{}", z); // 'a
 }
+
+struct StrSplit<'s, 'p> {
+    delimiter: &'p str,
+    document: &'s str,
+}
+impl<'s, 'p> Iterator for trSplit<'s, 'p> {
+    type Item = &'s str;
+    fn next(&self) -> Option<Self::Item> {
+        todo!()
+    }
+}
+fn str_before(s: &str, c: char) -> Option<&str> {
+    StrSplit {
+        document: s,
+        delimiter: &c.to_string(),
+    }
+    .next()
+}
+
+struct MutStr<'a, 'b> {
+    s: &'a mut &'b str
+}
+let mut s = "hello";
+*MutStr { s: mut s }.s = "world";
+println!("{}", s);
